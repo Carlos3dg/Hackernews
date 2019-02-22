@@ -29,8 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         {
-          list.map(function(list) {
-            return (
+          list.map(list => 
               <div key={list.objectID}>
                 <span>
                   <a href={list.url}>{list.title}</a>
@@ -38,9 +37,7 @@ class App extends Component {
                 <span>{list.author}</span>
                 <span>{list.num_comments}</span>
                 <span>{list.points}</span>
-              </div>
-            );
-          })
+              </div>)
         }
       </div>
     ); //The return value is the element (HTML), one more thing, to set a variable in JSX we use curly braces
